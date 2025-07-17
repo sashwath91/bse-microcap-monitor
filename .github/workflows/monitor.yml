@@ -2,12 +2,13 @@ name: BSE Microcap Monitor
 
 on:
   schedule:
-    - cron: "0 9 * * 1"  # every Monday at 9 AM UTC
+    - cron: "0 9 * * 1"  # every Monday at 9 AM UTC
   workflow_dispatch:
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -17,10 +18,13 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt beautifulsoup4
+
+      - name: Update microcaps list
+        run: python src/update_microcaps.py
 
       - name: Run monitor
         run: python src/main.py
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.5200806540:AAHTnE2pe7PpvWJPu7ZVw2UqPmNoaA_BufU }}
-          TELEGRAM_CHAT_ID: ${{ secrets.1170695797 }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
