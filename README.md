@@ -5,8 +5,8 @@ Tracks BSE microcap stocks and sends Telegram alerts when any doubles in the las
 ## ⚙️ Setup
 
 1. Add secrets on GitHub:
-   - `5200806540:AAHTnE2pe7PpvWJPu7ZVw2UqPmNoaA_BufU`
-   - `1170695797`
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
 
 2. Edit `src/main.py` to implement `update_microcaps()` or provide `microcaps.csv`.
 
