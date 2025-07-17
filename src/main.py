@@ -28,5 +28,11 @@ def main():
     update_microcaps()
     monitor()
 
+from update_microcaps import scrape_microcaps
+
+def update_microcaps():
+    scrape_microcaps()
+
+
 if __name__ == "__main__":
     main()
