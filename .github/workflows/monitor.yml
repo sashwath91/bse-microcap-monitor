@@ -22,5 +22,5 @@ jobs:
       - name: Run monitor
         run: python src/main.py
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.5200806540:AAHTnE2pe7PpvWJPu7ZVw2UqPmNoaA_BufU }}
+          TELEGRAM_CHAT_ID: ${{ secrets.1170695797 }}
